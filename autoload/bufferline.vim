@@ -1,5 +1,6 @@
 " keep track of vimrc setting
 let s:updatetime = &updatetime
+set showtabline=2
 
 " keep track of scrollinf window start
 let s:window_start = 0
@@ -101,7 +102,8 @@ function! s:echo()
     let line = strpart(line, 0, width)
   endif
 
-  echo line
+  " echo line
+  let &bufferline = line
 
   if &updatetime != s:updatetime
     let &updatetime = s:updatetime
