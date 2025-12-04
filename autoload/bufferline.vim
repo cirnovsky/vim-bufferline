@@ -103,7 +103,7 @@ function! s:echo()
   endif
 
   " echo line
-  let &bufferline = line
+  let &tabline = line
 
   if &updatetime != s:updatetime
     let &updatetime = s:updatetime
